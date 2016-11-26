@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
-
+	post "/" => "login#show"
 	resources :person
 	root "login#index"  
 # The priority is based upon order of creation: first created -> highest priority.

@@ -1,5 +1,6 @@
 <div id="form" class="container form-group">
-    <fieldset>
+    	<p class="text-danger"><%= flash[:notice] %></p>
+	<fieldset>
 	<%= form_for :person, class:"form-group" do |f| %>
        <div class="form-group row">
              <%= f.label :email,class: "col-xs-2 col-form-label" %>
