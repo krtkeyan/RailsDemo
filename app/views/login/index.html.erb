@@ -1,0 +1,21 @@
+<div id="form" class="container form-group">
+    <fieldset>
+	<%= form_for :person, class:"form-group" do |f| %>
+       <div class="form-group row">
+             <%= f.label :email,class: "col-xs-2 col-form-label" %>
+            <div class="col-xs-8">
+                  <%= f.email_field :email, class: "form-control" %>
+              </div>
+        </div>
+        <div class="form-group row">
+            <%= f.label :password, class: "col-xs-2 col-form-label" %>
+            <div class="col-xs-8">
+               <%= f.password_field :password, class: "form-control" %>
+            </div>
+        </div>
+        <%= f.submit "Login",class:"btn btn-primary" %>
+	<span id="register">Don't have account?</span>
+        <%= link_to 'Click here', {:controller => 'person', :action => 'new'}, {:method => :get }  %>
+	<% end %>
+	</fieldset>
+</div>
