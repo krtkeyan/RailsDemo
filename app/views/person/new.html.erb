@@ -1,5 +1,8 @@
 <div class="form">
 <fieldset class="form-group center_div">
+<p class="bg-warning">
+<%=  flash[:notice] %>
+</p>
 <legend>Register</legend>
 <%= form_for :person,url:person_index_path  do |f| %>
  <div class="form-group row">

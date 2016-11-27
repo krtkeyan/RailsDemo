@@ -12,8 +12,9 @@ class PersonController < ApplicationController
 		flash[:notice] = "Succes"
 		render  :action => "show"
 	else
-		flash[:notice]="error"
-		render :action => "create"
+		error=@person.errors.full_messages.first if @person.errors.any?
+		flash[:notice]=error
+		render :action => "new"
 	end
   end
   def show
