@@ -7,7 +7,7 @@ class PersonController < ApplicationController
 	@person=Person.find(params[:id])
   end
   def create
- 	@person=Person.new(params.fetch(:person,{}).permit(:name, :email, :password, :age, :gender, :country, :accept))
+ 	@person=Person.new(params.fetch(:person,{}).permit(:name, :email, :password,:password_confirmation, :age, :gender, :country, :accept))
 	if @person.save
 		flash[:notice] = "Succes"
 		render  :action => "show"

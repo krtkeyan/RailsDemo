@@ -1,4 +1,5 @@
-<div id="form" class="container form-group">
+<div>
+<div id="form" class="container form-group jumbotron">
     	<p class="text-danger"><%= flash[:notice] %></p>
 	<fieldset>
 	<%= form_for :person, class:"form-group" do |f| %>
@@ -19,4 +20,5 @@
         <%= link_to 'Click here', {:controller => 'person', :action => 'new'}, {:method => :get }  %>
 	<% end %>
 	</fieldset>
+</div>
 </div>
