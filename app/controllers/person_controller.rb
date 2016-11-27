@@ -21,7 +21,7 @@ class PersonController < ApplicationController
   end
   def update
   	@person=Person.find(params[:id])
-	if @person.update_attributes(name: params[:name],name: params[:email],password: params[:password], age: params[:age], gender: params[:gender], country: params[:country])
+	if @person.update_attributes(params.fetch(:person,{}).permit(:name, :email, :password, :age, :gender, :country))
 		flash[:notice] = "Updated Successfully"
                 render  :action => "show"
 	else
