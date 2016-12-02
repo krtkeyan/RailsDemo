@@ -11,6 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20161130115803) do
 
   # These are extensions that must be enabled in order to support this database
@@ -22,6 +23,27 @@ ActiveRecord::Schema.define(version: 20161130115803) do
     t.date     "release"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+=======
+ActiveRecord::Schema.define(version: 20161126054218) do
+
+  create_table "logins", force: :cascade do |t|
+    t.string   "email"
+    t.string   "password_digest"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  create_table "people", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
+    t.integer  "age"
+    t.string   "gender"
+    t.string   "country"
+    t.boolean  "accept"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "password"
+>>>>>>> aef38b28c5d386259bf136ac8949c995672668d1
   end
 
 end

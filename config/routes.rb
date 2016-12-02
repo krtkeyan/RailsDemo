@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
 	resources :movie
   # The priority is based upon order of creation: first created -> highest priority.
+=======
+  
+	post "/" => "login#show"
+	resources :person
+	root "login#index"  
+# The priority is based upon order of creation: first created -> highest priority.
+>>>>>>> aef38b28c5d386259bf136ac8949c995672668d1
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"

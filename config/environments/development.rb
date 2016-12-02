@@ -1,5 +1,6 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
+<<<<<<< HEAD
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
   :authentication => :plain,
@@ -9,6 +10,9 @@ Rails.application.configure do
   :user_name => "postmaster@sandbox2100fa8e2f4d4b1fb0f3ed4175cfa869.mailgun.org",
   :password => "73a2eee6f2e8263b813c5b0720a3f449"
 }
+=======
+
+>>>>>>> aef38b28c5d386259bf136ac8949c995672668d1
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.

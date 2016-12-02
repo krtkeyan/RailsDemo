@@ -1,0 +1,37 @@
+<hr class="my-2">
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-2">Hi <strong><%= @person.name %></strong></h1>
+  </div>
+</div>
+<hr class="my-2">
+<div class="text-danger"><%= flash[:notice] %></div>
+<div id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="card">
+    <div class="card-header" role="tab" id="headingOne">
+      <h5 class="mb-0">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Profile
+        </a>
+      </h5>
+    </div>
+      <div id="collapseOne" class="collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <div class="card-block">
+      <table class="table table-inverse">
+          <thead><tr><th>Name</th><th>Email</th><th>Age</th><th>Gender</th><th>Country</th></tr></thead>
+          <tbody><tr><td><%=@person.name %></td><td><%=@person.email %></td><td><%=@person.age %></td><td><%=@person.gender %></td><td><%=@person.country %></td></tr></tbody>
+       </table>
+      </div>
+    </div>
+
+    
+    </div>
+</div>
+
+
+
+<%= button_to "Update Profile",edit_person_path(@person),:method=>:get,class: "btn btn-primary prompt" %>
+  
+    
+     
+ <%= button_to "Delete",person_path(@person),method: :delete,confirm: "Are you Sure ?", class: "btn btn-warning prompt" %>
